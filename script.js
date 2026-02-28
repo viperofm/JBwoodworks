@@ -58,11 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
         video.play().catch(e => console.log("Autoplay blocked:", e));
       }
 
-      setTimeout(() => {
-        slide.classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
+      let prevSlide = currentSlide;
+      currentSlide = (currentSlide + 1) % slides.length;
 
+      setTimeout(() => {
+        slides[prevSlide].classList.remove('active');
+        slides[currentSlide].classList.add('active');
         playActiveSlide();
       }, duration);
     }
