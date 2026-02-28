@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.tmp.jpg
+*.tmp.mp4
+compress_media_v2.py
+update_html.py
+convert_media.py
+create_converter.py
+replace_css.py
