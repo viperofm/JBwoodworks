@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JB Woodworks | Custom Woodworking & Construction</title>
+    <meta name="description"
+        content="JB Woodworks provides high-quality custom woodworking, decks, boat docks, pergolas, and furniture." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-text">JB <span class="nav-logo-sub">WOODWORKS</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-socials" style="display: flex; gap: 12px; align-items: center;">
+                <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram"
+                    title="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>Follow Us</span>
+                </a>
+            </div>
+            <a href="#contact" class="btn btn-nav">Get a Quote</a>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#portfolio" class="mob-link">Portfolio</a></li>
+            <li><a href="#faq" class="mob-link">FAQ</a></li>
+            <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener"
+                    class="mob-link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener"
+                    class="mob-link">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener"
+                    class="mob-link">TikTok</a></li>
+            <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener" class="mob-link">Twitter</a></li>
+            <li><a href="#contact" class="btn btn-primary mob-link">Get a Quote</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <!-- Background Slider -->
+        <div class="hero-slider" id="heroSlider">
+            <!-- Hero Media Sequence -->
+            <div class="hero-slide active" data-duration="14000" data-video-start="0">
+                <video loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="Jah Images/Pergola/IMG_0047.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-slide" data-duration="5000" data-video-start="0">
+                <video loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="Jah Images/Trex Deck/I like.MOV" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-slide" data-duration="6000"
+                style="background-image: url('Jah Images/Boat Dock/IMG_1578_00.png'); background-position: center; background-size: cover;">
+            </div>
+            <div class="hero-slide" data-duration="3000" data-video-start="3">
+                <video loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="Jah Images/Deck/My Movie 2.mov" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-slide" data-duration="6000"
+                style="background-image: url('Jah Images/Pergola/IMG_1943.jpg'); background-position: center; background-size: cover;">
+            </div>
+            <div class="hero-slide" data-duration="6000"
+                style="background-image: url('Jah Images/Custom Pool Table/Resized_1000014068_733961905721315(1).JPG'); background-position: center; background-size: cover;">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <h1 class="hero-headline">Premium Craftsmanship.<br /><em>Built to Last.</em></h1>
+            <p class="hero-subheadline">We specialize in custom woodworking, from stunning decks and boat docks to
+                unique furniture and pergolas. Transforming your vision into a reality.</p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-primary btn-large">Start Your Project</a>
+                <a href="#portfolio" class="btn btn-ghost btn-large">View Our Work</a>
+            </div>
+
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-method">
+        <div class="container">
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-headline">Our Custom<br /><em>Services.</em></h2>
+
+            <div class="services-grid"
+                style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="5" r="3"></circle>
+                            <line x1="12" y1="22" x2="12" y2="8"></line>
+                            <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                        </svg>
+                    </div>
+                    <h3>Docks</h3>
+                    <p>High-quality custom docks built to last, perfect for waterfront properties.</p>
+                </div>
+                <div class="service-card fade-in-up" style="animation-delay:0.1s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12h20"></path>
+                            <path d="M2 8h20"></path>
+                            <path d="M2 16h20"></path>
+                            <path d="M2 20h20"></path>
+                            <path d="M6 12v8"></path>
+                            <path d="M18 12v8"></path>
+                        </svg>
+                    </div>
+                    <h3>Custom Decks</h3>
+                    <p>Whether it's for relaxing, entertaining, or lakefront views, we build durable, beautiful decks
+                        with attention to detail.</p>
+                </div>
+                <div class="service-card fade-in-up" style="animation-delay:0.2s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="10" width="18" height="4" rx="1"></rect>
+                            <path d="M5 14v7"></path>
+                            <path d="M19 14v7"></path>
+                            <path d="M2 10V6h20v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Furniture & Tables</h3>
+                    <p>Custom pool tables, handcrafted furniture, and unique pieces built with precision and passion.
+                    </p>
+                </div>
+                <div class="service-card fade-in-up" style="animation-delay:0.3s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 1 0 2.828 2.828Z"></path>
+                            <path d="m18 2 4 4"></path>
+                            <path d="m2 22 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3>Interior Trim & Millwork</h3>
+                    <p>Custom baseboards, crown molding, window trim, and detailed millwork to enhance your home's
+                        interior finish.</p>
+                </div>
+                <div class="service-card fade-in-up" style="animation-delay:0.4s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 10V3h18v7"></path>
+                            <path d="M3 10L12 3l9 7"></path>
+                            <path d="M6 10v11"></path>
+                            <path d="M18 10v11"></path>
+                            <rect x="10" y="16" width="4" height="5"></rect>
+                        </svg>
+                    </div>
+                    <h3>Outdoor Living Spaces</h3>
+                    <p>Create the perfect outdoor retreat with custom-built pergolas, patios, and living spaces designed
+                        to fit your lifestyle.</p>
+                </div>
+                <div class="service-card fade-in-up" style="animation-delay:0.5s">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 12l-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"></path>
+                            <path d="M17.64 15L22 10.64"></path>
+                            <path d="M20.91 11.7l-1.25-1.25c-6-6-6-6-6-6l-5.36 5.36c6 6 6 6 6 6z"></path>
+                        </svg>
+                    </div>
+                    <h3>Repairs & Staining</h3>
+                    <p>Keep your woodwork looking its best — from minor repairs to full refinishing and staining
+                        services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section id="portfolio" class="section-portfolio">
+        <div class="container">
+            <span class="section-tag">Our Work</span>
+            <h2 class="section-headline">Explore Our<br /><em>Signature Projects.</em></h2>
+
+            <div class="portfolio-grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); display: grid; gap: 30px;">
+                <!-- Portfolio Item 1 (Pergola) -->
+                <a href="project_pergola.html" style="text-decoration: none; color: inherit; display: block;"
+                    class="portfolio-card fade-in-up">
+                    <div class="portfolio-image" style="background-image: url('Jah Images/Pergola/IMG_1943.jpg');">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Pergolas</h3>
+                        <p class="portfolio-desc">Elegant pergolas providing the perfect balance of shade and outdoor
+                            comfort.</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 2 (Boat Dock) -->
+                <a href="project_boat_dock.html" style="text-decoration: none; color: inherit; display: block;"
+                    class="portfolio-card fade-in-up" style="animation-delay:0.1s">
+                    <div class="portfolio-image" style="background-image: url('Jah Images/Boat Dock/IMG_1578_00.png');">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Boat Docks</h3>
+                        <p class="portfolio-desc">Custom designed and built boat docks for durable waterfront living and
+                            easy access.</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 3 (Pool Table B) -->
+                <a href="project_custom_pool_table_b.html"
+                    style="text-decoration: none; color: inherit; display: block;" class="portfolio-card fade-in-up"
+                    style="animation-delay:0.2s">
+                    <div class="portfolio-image"
+                        style="background-image: url('Jah Images/Custom Pool Table/Resized_1000014068_733961905721315(1).JPG');">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Custom Pool Tables</h3>
+                        <p class="portfolio-desc">Handcrafted, tournament-quality pool tables that act as the perfect
+                            centerpiece for game night.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="portfolio.html" class="btn btn-primary btn-large">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-faq">
+        <div class="container">
+            <span class="section-tag">Questions</span>
+            <h2 class="section-headline">Everything you<br />need to know.</h2>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h4 class="faq-q">Do you offer free quotes?</h4>
+                    <p class="faq-a">Yes! We provide free estimates for all projects so you know exactly what to expect.
+                    </p>
+                </div>
+                <div class="faq-card">
+                    <h4 class="faq-q">What areas do you serve?</h4>
+                    <p class="faq-a">We're based in Orlando, Florida, and work throughout the surrounding areas/USA.</p>
+                </div>
+                <div class="faq-card">
+                    <h4 class="faq-q">Can you customize a project to fit my space?</h4>
+                    <p class="faq-a">Absolutely. Every project is tailored to your needs, style, and budget.</p>
+                </div>
+                <div class="faq-card">
+                    <h4 class="faq-q">What materials do you use?</h4>
+                    <p class="faq-a">We use only high-quality lumber and finishes to ensure your project is durable and
+                        long-lasting.</p>
+                </div>
+                <div class="faq-card">
+                    <h4 class="faq-q">Do you handle small repairs as well as large builds?</h4>
+                    <p class="faq-a">Yes — whether it's a quick repair, a custom piece of furniture, or a full outdoor
+                        build, we handle it all.</p>
+                </div>
+                <div class="faq-card">
+                    <h4 class="faq-q">Are you licensed and insured?</h4>
+                    <p class="faq-a">Absolutely. JB Woodworks operates fully licensed and insured, guaranteeing peace of
+                        mind and professional craftsmanship on every job site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section id="contact" class="section-apply">
+        <div class="apply-bg"></div>
+        <div class="container apply-inner">
+            <div class="apply-text">
+                <span class="section-tag">Contact Us</span>
+                <h2>Start your next<br /><em>project with us.</em></h2>
+                <p>Ready to transform your space? Send us a message detailing what you are looking to get done, and we
+                    will get back to you to discuss your vision.</p>
+                <div style="margin-top:40px; margin-bottom: 20px; font-size: 1.25rem;">
+                    <div style="margin-bottom: 12px;"><strong
+                            style="font-family: 'DM Serif Display', serif; color: var(--primary); font-size: 1.6rem; margin-right: 8px;">Phone:</strong>
+                        <a href="tel:4075611453" style="color:rgba(255,255,255,0.85); text-decoration: none;">(407)
+                            561-1453</a>
+                    </div>
+                    <div><strong
+                            style="font-family: 'DM Serif Display', serif; color: var(--primary); font-size: 1.6rem; margin-right: 8px;">Email:</strong>
+                        <a href="mailto:jbwoodworks8@gmail.com"
+                            style="color:rgba(255,255,255,0.85); text-decoration: none;">jbwoodworks8@gmail.com</a>
+                    </div>
+                </div>
+                <div class="apply-assurances">
+                    <div class="apply-assurance-item">
+                        <span class="assurance-dot"></span>
+                        <span>Free Estimates</span>
+                    </div>
+                    <div class="apply-assurance-item">
+                        <span class="assurance-dot"></span>
+                        <span>Custom Design Consultations</span>
+                    </div>
+                    <div class="apply-assurance-item">
+                        <span class="assurance-dot"></span>
+                        <span>Licensed & Insured</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="apply-form-wrap">
+                <form class="apply-form" id="applyForm" action="https://formsubmit.co/jbwoodworks8@gmail.com"
+                    method="POST">
+                    <!-- FormSubmit config -->
+                    <input type="hidden" name="_subject" value="New Project Inquiry — JB Woodworks" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <!-- Send users to the actual site URL instead of formsubmit default thank you page -->
+                    <input type="hidden" name="_next" id="formNext" value="" />
+
+                    <div class="form-group">
+                        <label for="fullName">Name</label>
+                        <input type="text" id="fullName" name="Name" placeholder="Your full name" required
+                            autocomplete="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="Email" placeholder="you@email.com" required
+                            autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone" placeholder="(555) 555-5555" />
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDetails">What are you looking to get done?</label>
+                        <textarea id="projectDetails" name="Project Details" rows="4"
+                            placeholder="Describe your project, timeline, etc." required
+                            style="width:100%; padding:0.8rem 1rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:6px; color:#fff; font-family:inherit;"></textarea>
+                    </div>
+                    <!-- Spam trap -->
+                    <input type="text" name="_honey" style="display:none" />
+                    <button type="submit" class="btn btn-primary btn-large btn-full" id="submitBtn">Send
+                        Inquiry</button>
+                </form>
+                <div class="form-success" id="formSuccess" style="display:none">
+                    <div class="form-success-icon">&#10003;</div>
+                    <h3>Message received.</h3>
+                    <p>Thank you for reaching out. We will be in touch shortly to discuss your project.</p>
+                </div>
+                <div class="form-error" id="formError" style="display:none">
+                    <p>Something went wrong. Please try again or email us directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap">
+                        <div>
+                            <a href="#" class="footer-logo">JB</a>
+                            <p class="footer-tagline">WOODWORKS</p>
+                        </div>
+                    </div>
+                    <p>Premium custom woodworking and construction.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#contact">Get a Quote</a></li>
+                        <li><a href="mailto:jbwoodworks8@gmail.com">jbwoodworks8@gmail.com</a></li>
+                        <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank"
+                                rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank"
+                                rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener">TikTok</a>
+                        </li>
+                        <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JB Woodworks. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set form redirect target to current URL with ?success=true
+        document.getElementById('formNext').value = window.location.href.split('?')[0] + '?success=true';
+    </script>
+</body>
+
+</html>
