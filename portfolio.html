@@ -1,30 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | JB Woodworks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        .portfolio-header { padding-top: 150px; padding-bottom: 40px; text-align: center; background: var(--black-2); }
-        .portfolio-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; background: var(--black-1); border-bottom: 1px solid var(--border); }
-        .tab-btn { background: transparent; color: var(--white-50); border: 1px solid var(--border); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: all 0.3s ease; }
-        .tab-btn:hover { color: var(--white); border-color: var(--gold); }
-        .tab-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); font-weight: 600; }
-        .portfolio-grid-container { padding: 60px 0; background: var(--black-2); }
-        .portfolio-item { display: none; }
-        .portfolio-item.show { display: block; animation: fadeIn 0.5s ease; }
-        
-        .gallery-grid-container { padding: 60px 0; background: var(--black-2); }
-        .gallery-item { width: 100%; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--black-3); display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
-        .gallery-item img, .gallery-item video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .portfolio-header {
+            padding-top: 150px;
+            padding-bottom: 40px;
+            text-align: center;
+            background: var(--black-2);
+        }
+
+        .portfolio-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--black-1);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            background: transparent;
+            color: var(--white-50);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--white);
+            border-color: var(--gold);
+        }
+
+        .tab-btn.active {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+
+        .portfolio-grid-container {
+            padding: 60px 0;
+            background: var(--black-2);
+        }
+
+        .portfolio-item {
+            display: none;
+        }
+
+        .portfolio-item.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .gallery-grid-container {
+            padding: 60px 0;
+            background: var(--black-2);
+        }
+
+        .gallery-item {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--black-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- NAV -->
@@ -40,8 +121,10 @@
                 <li><a href="index.html#contact">Contact Us</a></li>
             </ul>
             <div class="nav-socials" style="display: flex; gap: 12px; align-items: center;">
-                <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram" title="Instagram">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram"
+                    title="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -62,9 +145,12 @@
             <li><a href="index.html#services" class="mob-link">Services</a></li>
             <li><a href="portfolio.html" class="mob-link">Portfolio</a></li>
             <li><a href="index.html#faq" class="mob-link">FAQ</a></li>
-            <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="mob-link">Instagram</a></li>
-            <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener" class="mob-link">Facebook</a></li>
-            <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener" class="mob-link">TikTok</a></li>
+            <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener"
+                    class="mob-link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener"
+                    class="mob-link">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener"
+                    class="mob-link">TikTok</a></li>
             <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener" class="mob-link">Twitter</a></li>
             <li><a href="index.html#contact" class="btn btn-primary mob-link">Get a Quote</a></li>
         </ul>
@@ -75,7 +161,8 @@
         <div class="container">
             <span class="section-tag">Our Masterpieces</span>
             <h1 class="hero-headline" style="font-size: 3.5rem; margin-top:20px;">Full <em>Portfolio</em></h1>
-            <a href="index.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back to Main Page</a>
+            <a href="index.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back to
+                Main Page</a>
         </div>
     </section>
 
@@ -93,85 +180,108 @@
     <div class="portfolio-grid-container">
         <div class="container">
             <div class="portfolio-grid">
-<a href="project_boat_dock.html" style="text-decoration: none; color: inherit;" class="portfolio-item BoatDock">
-            <div class="portfolio-card">
-                <video class="portfolio-image" style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted playsinline>
-                    <source src="Jah Images/Boat Dock/IMG_1577.mp4" type="video/mp4">
-                </video>
-                <div class="portfolio-content">
-                    <h3>Boat Dock</h3>
-                    <p class="portfolio-desc">View all 5 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_custom_furniture_a.html" style="text-decoration: none; color: inherit;" class="portfolio-item CustomFurniture">
-            <div class="portfolio-card">
-                <div class="portfolio-image" style="background-image: url('Jah Images/Custom Furniture/IMG_1128_00.jpg');"></div>
-                <div class="portfolio-content">
-                    <h3>Custom Furniture (A)</h3>
-                    <p class="portfolio-desc">View all 4 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_custom_furniture_b.html" style="text-decoration: none; color: inherit;" class="portfolio-item CustomFurniture">
-            <div class="portfolio-card">
-                <div class="portfolio-image" style="background-image: url('Jah Images/Custom Furniture/0FE1AF74-18F7-46BD-B582-0A5357CD9CB5.jpg');"></div>
-                <div class="portfolio-content">
-                    <h3>Custom Furniture (B)</h3>
-                    <p class="portfolio-desc">View all 7 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_custom_pool_table_a.html" style="text-decoration: none; color: inherit;" class="portfolio-item CustomPoolTable">
-            <div class="portfolio-card">
-                <div class="portfolio-image" style="background-image: url('Jah Images/Custom Pool Table/Resized_1000013685_732422567246746.jpg');"></div>
-                <div class="portfolio-content">
-                    <h3>Custom Pool Table (A)</h3>
-                    <p class="portfolio-desc">View all 3 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_custom_pool_table_b.html" style="text-decoration: none; color: inherit;" class="portfolio-item CustomPoolTable">
-            <div class="portfolio-card">
-                <div class="portfolio-image" style="background-image: url('Jah Images/Custom Pool Table/Resized_1000014068_733961905721315(1).jpg');"></div>
-                <div class="portfolio-content">
-                    <h3>Custom Pool Table (B)</h3>
-                    <p class="portfolio-desc">View all 5 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_deck.html" style="text-decoration: none; color: inherit;" class="portfolio-item Deck">
-            <div class="portfolio-card">
-                <video class="portfolio-image" style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted playsinline>
-                    <source src="Jah Images/Deck/IMG_1558.mp4" type="video/mp4">
-                </video>
-                <div class="portfolio-content">
-                    <h3>Deck</h3>
-                    <p class="portfolio-desc">View all 3 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_pergola.html" style="text-decoration: none; color: inherit;" class="portfolio-item Pergola">
-            <div class="portfolio-card">
-                <div class="portfolio-image" style="background-image: url('Jah Images/Pergola/IMG_0037.jpg');"></div>
-                <div class="portfolio-content">
-                    <h3>Pergola</h3>
-                    <p class="portfolio-desc">View all 7 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
-        <a href="project_trex_deck.html" style="text-decoration: none; color: inherit;" class="portfolio-item TrexDeck">
-            <div class="portfolio-card">
-                <video class="portfolio-image" style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted playsinline>
-                    <source src="Jah Images/Trex Deck/I like.mp4" type="video/mp4">
-                </video>
-                <div class="portfolio-content">
-                    <h3>Trex Deck</h3>
-                    <p class="portfolio-desc">View all 12 photos/videos &rarr;</p>
-                </div>
-            </div>
-        </a>
+                <a href="project_boat_dock.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item BoatDock">
+                    <div class="portfolio-card">
+                        <video class="portfolio-image"
+                            style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted
+                            playsinline>
+                            <source src="Jah Images/Boat Dock/IMG_1577.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Boat Dock</h3>
+                            <p class="portfolio-desc">View all 5 photos/videos &rarr;</p>
+                        </div>
                     </div>
+                </a>
+                <a href="project_custom_furniture.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item CustomFurniture">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image"
+                            style="background-image: url('Jah Images/Custom Furniture/IMG_1128_00.jpg');"></div>
+                        <div class="portfolio-content">
+                            <h3>Custom Furniture</h3>
+                            <p class="portfolio-desc">View all 11 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project_custom_pool_table_a.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item CustomPoolTable">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image"
+                            style="background-image: url('Jah Images/Custom Pool Table/Resized_1000013945_732394633938684.jpg');">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Custom Pool Table (A)</h3>
+                            <p class="portfolio-desc">View all 3 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project_custom_pool_table_b.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item CustomPoolTable">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image"
+                            style="background-image: url('Jah Images/Custom Pool Table/Resized_1000014068_733961905721315(1).jpg');">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Custom Pool Table (B)</h3>
+                            <p class="portfolio-desc">View all 5 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project_deck.html" style="text-decoration: none; color: inherit;" class="portfolio-item Deck">
+                    <div class="portfolio-card">
+                        <video class="portfolio-image"
+                            style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted
+                            playsinline>
+                            <source src="Jah Images/Deck/IMG_1558.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Deck</h3>
+                            <p class="portfolio-desc">View all 3 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project_pergola_a.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item Pergola">
+                    <div class="portfolio-card">
+                        <video class="portfolio-image"
+                            style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted
+                            playsinline>
+                            <source src="Jah Images/Pergola/IMG_0047.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Pergola (A)</h3>
+                            <p class="portfolio-desc">View all 2 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project_pergola_b.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item Pergola">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" style="background-image: url('Jah Images/Pergola/IMG_1943.jpg');">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Pergola (B)</h3>
+                            <p class="portfolio-desc">View all 2 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="project_trex_deck.html" style="text-decoration: none; color: inherit;"
+                    class="portfolio-item TrexDeck">
+                    <div class="portfolio-card">
+                        <video class="portfolio-image"
+                            style="width: 100%; height: 280px; object-fit: cover; background: #000;" autoplay loop muted
+                            playsinline>
+                            <source src="Jah Images/Trex Deck/I like.mp4" type="video/mp4">
+                        </video>
+                        <div class="portfolio-content">
+                            <h3>Trex Deck</h3>
+                            <p class="portfolio-desc">View all 12 photos/videos &rarr;</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <div style="text-align: center; padding: 60px; background: var(--black-1);">
@@ -203,9 +313,12 @@
                     <ul>
                         <li><a href="index.html#contact">Get a Quote</a></li>
                         <li><a href="mailto:jbwoodworks8@gmail.com">jbwoodworks8@gmail.com</a></li>
-                        <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener">Facebook</a></li>
-                        <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener">TikTok</a></li>
+                        <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank"
+                                rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank"
+                                rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener">TikTok</a>
+                        </li>
                         <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener">Twitter</a></li>
                     </ul>
                 </div>
@@ -236,9 +349,9 @@
             var btns = document.getElementsByClassName("tab-btn");
             for (var i = 0; i < btns.length; i++) {
                 btns[i].className = btns[i].className.replace(" active", "");
-                if(c == "" && btns[i].innerHTML == "All Projects") {
+                if (c == "" && btns[i].innerHTML == "All Projects") {
                     btns[i].className += " active";
-                } else if(btns[i].innerHTML.replace(/ /g, "") == c) {
+                } else if (btns[i].innerHTML.replace(/ /g, "") == c) {
                     btns[i].className += " active";
                 }
             }
@@ -248,7 +361,7 @@
             arr1 = element.className.split(" ");
             arr2 = name.split(" ");
             for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
             }
         }
         function w3RemoveClass(element, name) {
@@ -263,4 +376,5 @@
         filterSelection("all");
     </script>
 </body>
+
 </html>

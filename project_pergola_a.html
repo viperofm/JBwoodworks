@@ -1,30 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pergola 1 | JB Woodworks</title>
+    <title>Pergola (A) | JB Woodworks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        .portfolio-header { padding-top: 150px; padding-bottom: 40px; text-align: center; background: var(--black-2); }
-        .portfolio-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; background: var(--black-1); border-bottom: 1px solid var(--border); }
-        .tab-btn { background: transparent; color: var(--white-50); border: 1px solid var(--border); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: all 0.3s ease; }
-        .tab-btn:hover { color: var(--white); border-color: var(--gold); }
-        .tab-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); font-weight: 600; }
-        .portfolio-grid-container { padding: 60px 0; background: var(--black-2); }
-        .portfolio-item { display: none; }
-        .portfolio-item.show { display: block; animation: fadeIn 0.5s ease; }
-        
-        .gallery-grid-container { padding: 60px 0; background: var(--black-2); }
-        .gallery-item { width: 100%; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--black-3); display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
-        .gallery-item img, .gallery-item video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
-        
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .portfolio-header {
+            padding-top: 150px;
+            padding-bottom: 40px;
+            text-align: center;
+            background: var(--black-2);
+        }
+
+        .portfolio-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--black-1);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            background: transparent;
+            color: var(--white-50);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--white);
+            border-color: var(--gold);
+        }
+
+        .tab-btn.active {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+
+        .portfolio-grid-container {
+            padding: 60px 0;
+            background: var(--black-2);
+        }
+
+        .portfolio-item {
+            display: none;
+        }
+
+        .portfolio-item.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .gallery-grid-container {
+            padding: 60px 0;
+            background: var(--black-2);
+        }
+
+        .gallery-item {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--black-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- NAV -->
@@ -40,8 +121,10 @@
                 <li><a href="/#contact">Contact Us</a></li>
             </ul>
             <div class="nav-socials" style="display: flex; gap: 12px; align-items: center;">
-                <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram" title="Instagram">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram"
+                    title="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -62,9 +145,12 @@
             <li><a href="/#services" class="mob-link">Services</a></li>
             <li><a href="/portfolio" class="mob-link">Portfolio</a></li>
             <li><a href="/#faq" class="mob-link">FAQ</a></li>
-            <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="mob-link">Instagram</a></li>
-            <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener" class="mob-link">Facebook</a></li>
-            <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener" class="mob-link">TikTok</a></li>
+            <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener"
+                    class="mob-link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener"
+                    class="mob-link">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener"
+                    class="mob-link">TikTok</a></li>
             <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener" class="mob-link">Twitter</a></li>
             <li><a href="/#contact" class="btn btn-primary mob-link">Get a Quote</a></li>
         </ul>
@@ -74,26 +160,34 @@
     <section class="portfolio-header">
         <div class="container">
             <span class="section-tag">Our Masterpieces</span>
-            <h1 class="hero-headline" style="font-size: 3.5rem; margin-top:20px;">Project: <em>Pergola 1</em></h1>
-            <a href="portfolio.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back to Portfolio</a>
+            <h1 class="hero-headline" style="font-size: 3.5rem; margin-top:20px;">Project: <em>Pergola (A)</em></h1>
+            <a href="portfolio.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back
+                to Portfolio</a>
         </div>
     </section>
-<div class="gallery-grid-container"><div class="container">
-    <div style="background: var(--black-1); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--gold); margin-bottom: 40px;">
-        <p style="font-size: 1.1rem; line-height: 1.7; color: var(--white-80); margin: 0;">The perfect balance of shade and outdoor comfort. The family wanted a dedicated space to host friends and relax safely out of the intense sun. We custom-built this stunning pergola, ensuring the clients had a beautiful and sturdy structure to enjoy the fresh breeze.</p>
+    <div class="gallery-grid-container">
+        <div class="container">
+            <div
+                style="background: var(--black-1); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--gold); margin-bottom: 40px;">
+                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--white-80); margin: 0;">The perfect balance
+                    of shade and outdoor comfort. The family wanted a dedicated space to host friends and relax safely
+                    out of the intense sun. We custom-built this stunning pergola, ensuring the clients had a beautiful
+                    and sturdy structure to enjoy the fresh breeze.</p>
+            </div>
+            <div class="gallery-grid" style="column-count: 1; gap: 30px;">
+                <div class="gallery-item fade-in-up">
+                    <video autoplay loop muted playsinline controls>
+                        <source src="Jah Images/Pergola/IMG_0047.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="gallery-item fade-in-up">
+                    <video autoplay loop muted playsinline controls>
+                        <source src="Jah Images/Pergola/IMG_0050.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="gallery-grid" style="column-count: 1; gap: 30px;">
-<div class="gallery-item fade-in-up">
-                <video autoplay loop muted playsinline controls>
-                    <source src="Jah Images/Pergola/IMG_0047.mp4" type="video/mp4">
-                </video>
-            </div>
-<div class="gallery-item fade-in-up">
-                <video autoplay loop muted playsinline controls>
-                    <source src="Jah Images/Pergola/IMG_0050.mp4" type="video/mp4">
-                </video>
-            </div>
-</div></div></div>
 
     <div style="text-align: center; padding: 60px; background: var(--black-1);">
         <a href="index.html#contact" class="btn btn-primary btn-large">Start Your Custom Project</a>
@@ -124,9 +218,12 @@
                     <ul>
                         <li><a href="/#contact">Get a Quote</a></li>
                         <li><a href="mailto:jbwoodworks8@gmail.com">jbwoodworks8@gmail.com</a></li>
-                        <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener">Facebook</a></li>
-                        <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener">TikTok</a></li>
+                        <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank"
+                                rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank"
+                                rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener">TikTok</a>
+                        </li>
                         <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener">Twitter</a></li>
                     </ul>
                 </div>
@@ -145,4 +242,5 @@
         document.getElementById('navbar').classList.add('scrolled');
     </script>
 </body>
+
 </html>

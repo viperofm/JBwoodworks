@@ -1,124 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Pool Table (B) | JB Woodworks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        .portfolio-header {
-            padding-top: 150px;
-            padding-bottom: 40px;
-            text-align: center;
-            background: var(--black-2);
-        }
-
-        .portfolio-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px;
-            background: var(--black-1);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tab-btn {
-            background: transparent;
-            color: var(--white-50);
-            border: 1px solid var(--border);
-            padding: 10px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .tab-btn:hover {
-            color: var(--white);
-            border-color: var(--gold);
-        }
-
-        .tab-btn.active {
-            background: var(--gold);
-            color: var(--black);
-            border-color: var(--gold);
-            font-weight: 600;
-        }
-
-        .portfolio-grid-container {
-            padding: 60px 0;
-            background: var(--black-2);
-        }
-
-        .portfolio-item {
-            display: none;
-        }
-
-        .portfolio-item.show {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .gallery-grid-container {
-            padding: 60px 0;
-            background: var(--black-2);
-        }
-
-        .gallery-item {
-            width: 100%;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: var(--black-3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .gallery-item img,
-        .gallery-item video {
-            width: 100%;
-            height: auto;
-            max-height: 80vh;
-            object-fit: contain;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        .portfolio-header { padding-top: 150px; padding-bottom: 40px; text-align: center; background: var(--black-2); }
+        .portfolio-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; background: var(--black-1); border-bottom: 1px solid var(--border); }
+        .tab-btn { background: transparent; color: var(--white-50); border: 1px solid var(--border); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: all 0.3s ease; }
+        .tab-btn:hover { color: var(--white); border-color: var(--gold); }
+        .tab-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); font-weight: 600; }
+        .portfolio-grid-container { padding: 60px 0; background: var(--black-2); }
+        .portfolio-item { display: none; }
+        .portfolio-item.show { display: block; animation: fadeIn 0.5s ease; }
+        
+        .gallery-grid-container { padding: 60px 0; background: var(--black-2); }
+        .gallery-item { width: 100%; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--black-3); display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
+        .gallery-item img, .gallery-item video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-
 <body>
 
     <!-- NAV -->
     <nav id="navbar" class="scrolled">
         <div class="nav-inner">
-            <a href="/" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <span class="nav-logo-text">JB <span class="nav-logo-sub">WOODWORKS</span></span>
             </a>
             <ul class="nav-links">
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/#faq">FAQ</a></li>
-                <li><a href="/#contact">Contact Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
             </ul>
             <div class="nav-socials" style="display: flex; gap: 12px; align-items: center;">
                 <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram" title="Instagram">
@@ -130,7 +49,7 @@
                     <span>Follow Us</span>
                 </a>
             </div>
-            <a href="/#contact" class="btn btn-nav">Get a Quote</a>
+            <a href="index.html#contact" class="btn btn-nav">Get a Quote</a>
             <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -140,14 +59,14 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="/#services" class="mob-link">Services</a></li>
-            <li><a href="/portfolio" class="mob-link">Portfolio</a></li>
-            <li><a href="/#faq" class="mob-link">FAQ</a></li>
+            <li><a href="index.html#services" class="mob-link">Services</a></li>
+            <li><a href="portfolio.html" class="mob-link">Portfolio</a></li>
+            <li><a href="index.html#faq" class="mob-link">FAQ</a></li>
             <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="mob-link">Instagram</a></li>
             <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener" class="mob-link">Facebook</a></li>
             <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener" class="mob-link">TikTok</a></li>
             <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener" class="mob-link">Twitter</a></li>
-            <li><a href="/#contact" class="btn btn-primary mob-link">Get a Quote</a></li>
+            <li><a href="index.html#contact" class="btn btn-primary mob-link">Get a Quote</a></li>
         </ul>
     </div>
 
@@ -155,43 +74,36 @@
     <section class="portfolio-header">
         <div class="container">
             <span class="section-tag">Our Masterpieces</span>
-            <h1 class="hero-headline" style="font-size: 3.5rem; margin-top:20px;">Project: <em>Custom Pool Table
-                    (B)</em></h1>
-            <a href="portfolio.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back
-                to Portfolio</a>
+            <h1 class="hero-headline" style="font-size: 3.5rem; margin-top:20px;">Project: <em>Custom Pool Table (B)</em></h1>
+            <a href="portfolio.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back to Portfolio</a>
         </div>
     </section>
-    <div class="gallery-grid-container">
-        <div class="container">
-            <div
-                style="background: var(--black-1); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--gold); margin-bottom: 40px;">
-                <p style="font-size: 1.1rem; line-height: 1.7; color: var(--white-80); margin: 0;">We designed this
-                    stunning pool table from scratch to fit perfectly within the home's aesthetics. The family was
-                    overjoyed with the final result, providing a robust and elegant space for evening entertainment.</p>
-            </div>
-            <div class="gallery-grid" style="column-count: 1; gap: 30px;">
-
-                
-
-                <div class="gallery-item fade-in-up">
-                    <img src="Jah Images/Custom Pool Table/Resized_1000014068_733961905721315.jpg"
-                        alt="Custom Pool Table (B) Picture">
-                </div>
-
-                
-
-                <div class="gallery-item fade-in-up">
-                    <img src="Jah Images/Custom Pool Table/Resized_1000014069_733964296900221.jpg"
-                        alt="Custom Pool Table (B) Picture">
-                </div>
-
-                <div class="gallery-item fade-in-up">
-                    <img src="Jah Images/Custom Pool Table/Resized_1000014070_733972577063447.jpg"
-                        alt="Custom Pool Table (B) Picture">
-                </div>
-            </div>
-        </div>
+<div class="gallery-grid-container"><div class="container">
+    <div style="background: var(--black-1); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--gold); margin-bottom: 40px;">
+        <p style="font-size: 1.1rem; line-height: 1.7; color: var(--white-80); margin: 0;">We designed this stunning pool table from scratch to fit perfectly within the home's aesthetics. The family was overjoyed with the final result, providing a robust and elegant space for evening entertainment.</p>
     </div>
+    <div class="gallery-grid" style="column-count: 1; gap: 30px;">
+
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Pool Table/Resized_1000014068_733961905721315(1).jpg" alt="Custom Pool Table (B) Picture">
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Pool Table/Resized_1000014068_733961905721315.jpg" alt="Custom Pool Table (B) Picture">
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Pool Table/Resized_1000014069_733964296900221(1).jpg" alt="Custom Pool Table (B) Picture">
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Pool Table/Resized_1000014069_733964296900221.jpg" alt="Custom Pool Table (B) Picture">
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Pool Table/Resized_1000014070_733972577063447.jpg" alt="Custom Pool Table (B) Picture">
+            </div>
+            </div></div></div>
 
     <div style="text-align: center; padding: 60px; background: var(--black-1);">
         <a href="index.html#contact" class="btn btn-primary btn-large">Start Your Custom Project</a>
@@ -203,7 +115,7 @@
                 <div class="footer-brand">
                     <div class="footer-logo-wrap">
                         <div>
-                            <a href="/" class="footer-logo">JB</a>
+                            <a href="index.html" class="footer-logo">JB</a>
                             <p class="footer-tagline">WOODWORKS</p>
                         </div>
                     </div>
@@ -212,15 +124,15 @@
                 <div class="footer-links-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="/#services">Services</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
-                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-links-col">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="/#contact">Get a Quote</a></li>
+                        <li><a href="index.html#contact">Get a Quote</a></li>
                         <li><a href="mailto:jbwoodworks8@gmail.com">jbwoodworks8@gmail.com</a></li>
                         <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener">Instagram</a></li>
                         <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener">Facebook</a></li>
@@ -232,8 +144,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 JB Woodworks. All rights reserved.</p>
                 <div class="footer-legal-links">
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -243,5 +155,4 @@
         document.getElementById('navbar').classList.add('scrolled');
     </script>
 </body>
-
 </html>

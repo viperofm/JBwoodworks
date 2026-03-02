@@ -184,6 +184,16 @@ for d in directories:
         if p1: projects["Custom Furniture (A)"] = {"files": p1, "cat": "Custom Furniture"}
         if p2: projects["Custom Furniture (B)"] = {"files": p2, "cat": "Custom Furniture"}
         
+    elif d == "Pergola":
+        # Group by prefix IMG_00 vs IMG_18/19
+        p1 = []
+        p2 = []
+        for f in files:
+            if "IMG_00" in f: p1.append((d, f))
+            else: p2.append((d, f))
+        if p1: projects["Pergola (A)"] = {"files": p1, "cat": "Pergola"}
+        if p2: projects["Pergola (B)"] = {"files": p2, "cat": "Pergola"}
+        
     else:
         if d not in projects:
             projects[d] = {"files": [], "cat": d}
@@ -197,7 +207,8 @@ project_descriptions = {
     "Custom Furniture (B)": "Hand-crafted to match the specific vision of the homeowners, this unique piece effortlessly blending style with everyday functionality. The clients loved the seamless finish and sturdy construction.",
     "Boat Dock": "A massive masterclass in waterfront construction. The client's family can now safely enjoy their lakefront property year-round. This heavily reinforced boat dock provides easy access while perfectly complementing the beautiful outdoor views.",
     "Deck": "Creating a beautiful transition from the indoors to the outdoors! We built this gorgeous deck to give the family an incredible outdoor living space for weekend barbecues and relaxing evenings under the stars. The clients were incredibly happy with the structural quality.",
-    "Pergola": "The perfect balance of shade and outdoor comfort. The family wanted a dedicated space to host friends and relax safely out of the intense sun. We custom-built this stunning pergola, ensuring the clients had a beautiful and sturdy structure to enjoy the fresh breeze.",
+    "Pergola (A)": "The perfect balance of shade and outdoor comfort. The family wanted a dedicated space to host friends and relax safely out of the intense sun. We custom-built this stunning pergola (Part 1), ensuring the clients had a beautiful and sturdy structure.",
+    "Pergola (B)": "Continuing our work on custom outdoor shade structures, this beautiful pergola offers an elegant retreat in the backyard. Perfect for relaxing and enjoying the fresh breeze year-round.",
     "Trex Deck": "Using top-of-the-line Trex decking materials, we created an absolutely massive, maintenance-free outdoor living expansion. The clients were stunned at the transformation. It is the perfect, safe environment for kids to play and parents to entertain without worry of splinters or rotting."
 }
 

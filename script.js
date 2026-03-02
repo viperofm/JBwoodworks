@@ -91,25 +91,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   countEls.forEach(el => countObserver.observe(el));
 
-  /* ---- FORM SUBMISSION (Redirect based to preserve FormSubmit workflow) ---- */
-  // Instead of intercepting the submit using JS which can block the FormSubmit 
-  // Captcha or redirect, we will allow the native HTML form submit to proceed.
-  // We added a hidden _next field in the HTML to redirect back to this page with ?success=true
+  /* ---- FORM SUBMISSION (AJAX based to prevent redirect) ---- */
+  const applyForm = document.getElementById('applyForm');
+  const formSuccess = document.getElementById('formSuccess');
+  const formError = document.getElementById('formError');
 
-  // Checking if redirected back after successful submission
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('success') === 'true') {
-    const applyForm = document.getElementById('applyForm');
-    const formSuccess = document.getElementById('formSuccess');
-    if (applyForm && formSuccess) {
-      applyForm.style.display = 'none';
-      formSuccess.style.display = 'block';
-      // Scroll down to the contact secton to show success message
-      setTimeout(() => {
-        const contactSec = document.getElementById('contact');
-        if (contactSec) window.scrollTo({ top: contactSec.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-      }, 500);
-    }
+  if (applyForm) {
+    applyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn ? submitBtn.textContent : "Send Inquiry";
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+
+      const formData = new FormData(applyForm);
+      const actionUrl = applyForm.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+      fetch(actionUrl, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success || data.success === "true") {
+            applyForm.style.display = 'none';
+            if (formSuccess) formSuccess.style.display = 'block';
+
+            // Scroll down to the contact secton to show success message
+            setTimeout(() => {
+              const contactSec = document.getElementById('contact');
+              if (contactSec) window.scrollTo({ top: contactSec.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+            }, 100);
+          } else {
+            // FormSubmit might need activation
+            if (data.message && data.message.includes("Activation")) {
+              if (formError) {
+                formError.innerHTML = "<p>Check Your Email: This form needs Activation. We've sent you an email containing an 'Activate Form' link. Just click it and your form will be activated!</p>";
+                formError.style.display = 'block';
+              }
+            } else {
+              if (formError) formError.style.display = 'block';
+            }
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalText;
+            }
+          }
+        })
+        .catch(error => {
+          console.error(error);
+          if (formError) formError.style.display = 'block';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }
+        });
+    });
   }
 
 });

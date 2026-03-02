@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Furniture (A) | JB Woodworks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .portfolio-header { padding-top: 150px; padding-bottom: 40px; text-align: center; background: var(--black-2); }
+        .portfolio-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 20px; background: var(--black-1); border-bottom: 1px solid var(--border); }
+        .tab-btn { background: transparent; color: var(--white-50); border: 1px solid var(--border); padding: 10px 20px; border-radius: 30px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: all 0.3s ease; }
+        .tab-btn:hover { color: var(--white); border-color: var(--gold); }
+        .tab-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); font-weight: 600; }
+        .portfolio-grid-container { padding: 60px 0; background: var(--black-2); }
+        .portfolio-item { display: none; }
+        .portfolio-item.show { display: block; animation: fadeIn 0.5s ease; }
+        
+        .gallery-grid-container { padding: 60px 0; background: var(--black-2); }
+        .gallery-item { width: 100%; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--black-3); display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
+        .gallery-item img, .gallery-item video { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-text">JB <span class="nav-logo-sub">WOODWORKS</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-socials" style="display: flex; gap: 12px; align-items: center;">
+                <a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="nav-instagram" title="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>Follow Us</span>
+                </a>
+            </div>
+            <a href="index.html#contact" class="btn btn-nav">Get a Quote</a>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html#services" class="mob-link">Services</a></li>
+            <li><a href="portfolio.html" class="mob-link">Portfolio</a></li>
+            <li><a href="index.html#faq" class="mob-link">FAQ</a></li>
+            <li><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener" class="mob-link">Instagram</a></li>
+            <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener" class="mob-link">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener" class="mob-link">TikTok</a></li>
+            <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener" class="mob-link">Twitter</a></li>
+            <li><a href="index.html#contact" class="btn btn-primary mob-link">Get a Quote</a></li>
+        </ul>
+    </div>
+
+    <!-- HEADER -->
+    <section class="portfolio-header">
+        <div class="container">
+            <span class="section-tag">Our Masterpieces</span>
+            <h1 class="hero-headline" style="font-size: 3.5rem; margin-top:20px;">Project: <em>Custom Furniture (A)</em></h1>
+            <a href="portfolio.html" class="btn btn-ghost" style="margin-top: 20px; display:inline-block;">&larr; Back to Portfolio</a>
+        </div>
+    </section>
+<div class="gallery-grid-container"><div class="container">
+    <div style="background: var(--black-1); padding: 30px; border-radius: var(--radius-md); border-left: 4px solid var(--gold); margin-bottom: 40px;">
+        <p style="font-size: 1.1rem; line-height: 1.7; color: var(--white-80); margin: 0;">This custom furniture piece was built entirely out of premium lumber to exceed the client's expectations. Knowing it will be part of the family's daily life, we focused on making it both gorgeous and highly durable.</p>
+    </div>
+    <div class="gallery-grid" style="column-count: 1; gap: 30px;">
+
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Furniture/IMG_1128_00.jpg" alt="Custom Furniture (A) Picture">
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <video autoplay loop muted playsinline controls>
+                    <source src="Jah Images/Custom Furniture/IMG_1133.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <video autoplay loop muted playsinline controls>
+                    <source src="Jah Images/Custom Furniture/IMG_1134.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="gallery-item fade-in-up">
+                <img src="Jah Images/Custom Furniture/IMG_1137_00.jpg" alt="Custom Furniture (A) Picture">
+            </div>
+            </div></div></div>
+
+    <div style="text-align: center; padding: 60px; background: var(--black-1);">
+        <a href="index.html#contact" class="btn btn-primary btn-large">Start Your Custom Project</a>
+    </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo-wrap">
+                        <div>
+                            <a href="index.html" class="footer-logo">JB</a>
+                            <p class="footer-tagline">WOODWORKS</p>
+                        </div>
+                    </div>
+                    <p>Premium custom woodworking and construction.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="index.html#contact">Get a Quote</a></li>
+                        <li><a href="mailto:jbwoodworks8@gmail.com">jbwoodworks8@gmail.com</a></li>
+                        <li style="margin-top: 15px;"><a href="https://www.instagram.com/jb.woodworkss" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/people/JB-Woodworks/61581118061434" target="_blank" rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@jbwoodworks_" target="_blank" rel="noopener">TikTok</a></li>
+                        <li><a href="https://x.com/jbwoodworks8" target="_blank" rel="noopener">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JB Woodworks. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('navbar').classList.add('scrolled');
+    </script>
+</body>
+</html>
